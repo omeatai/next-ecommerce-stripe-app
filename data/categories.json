@@ -1,0 +1,28 @@
+{
+    "selection": [
+        {
+            "id": 1,
+            "name": "Audio Devices",
+            "bgColor": "gray",
+            "img": "airpods.png"
+        },
+        {
+            "id": 2,
+            "name": "Phones",
+            "bgColor": "blue",
+            "img": "iphone.png"
+        },
+        {
+            "id": 3,
+            "name": "Laptops",
+            "bgColor": "rose",
+            "img": "macbook.png"
+        },
+        {
+            "id": 4,
+            "name": "Gaming Devices",
+            "bgColor": "gray",
+            "img": "msi.png"
+        }
+    ]
+}
