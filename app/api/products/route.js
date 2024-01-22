@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
-import mongooseConnect from "../../../lib/mongoose";
-import Product from "../../../models/Product";
+import mongooseConnect from "@/lib/mongoose";
+import Product from "@/models/Product";
 
 export async function GET() {
   try {

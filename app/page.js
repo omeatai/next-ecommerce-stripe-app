@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import Product from "../components/Product";
+import Product from "@/components/Product";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -40,10 +41,9 @@ export default function Home() {
   });
   const uniqueCategories = [...new Set(categoryList)];
 
-  // console.log(uniqueCategories);
-
   return (
     <div className="p-6">
+      <Navbar />
       <div>
         {loading && (
           <div className="flex justify-center">
