@@ -1,4 +1,5 @@
 import categories from "../../data/categories.json";
+import Navbar from "@/components/Navbar";
 
 export default function About() {
   const bg_color = {
@@ -9,10 +10,11 @@ export default function About() {
 
   return (
     <div className="p-8">
+      <Navbar />
       <div className="max-w-4xl text-justify my-4">
         <h1 className="text-2xl font-bold my-4">About Our Products</h1>
         <h3>
-          Welcome to TechWorld, your ultimate destination for cutting-edge
+          Welcome to EShop TechWorld, your ultimate destination for cutting-edge
           technology and electronic wonders! At TechWorld, we take pride in
           offering a curated selection of premium phones, laptops, audio
           devices, and gaming devices that redefine the boundaries of

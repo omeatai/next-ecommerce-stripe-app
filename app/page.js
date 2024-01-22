@@ -2,10 +2,12 @@
 import { useEffect, useState } from "react";
 import Product from "@/components/Product";
 import Navbar from "@/components/Navbar";
+import Search from "@/components/Search";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     const fetchDataFromApi = async () => {
@@ -36,7 +38,11 @@ export default function Home() {
     fetchDataFromApi();
   }, []);
 
-  const categoryList = products.map((product) => {
+  const filteredProducts = products.filter((product) => {
+    return product.name.toLowerCase().includes(search.toLowerCase());
+  });
+
+  const categoryList = filteredProducts.map((product) => {
     return product.category;
   });
   const uniqueCategories = [...new Set(categoryList)];
@@ -44,6 +50,7 @@ export default function Home() {
   return (
     <div className="p-6">
       <Navbar />
+      <Search search={search} setSearch={setSearch} />
       <div>
         {loading && (
           <div className="flex justify-center">
@@ -59,7 +66,7 @@ export default function Home() {
                 {category}
               </h2>
               <div className="flex gap-4 overflow-x-scroll scrollbar-hide snap-x snap-start">
-                {products
+                {filteredProducts
                   .filter((product) => product.category === category)
                   .map((product) => {
                     return (
