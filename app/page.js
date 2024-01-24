@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Product from "@/components/Product";
 import Navbar from "@/components/Navbar";
 import Search from "@/components/Search";
+import Layout from "@/components/Layout";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -48,7 +49,7 @@ export default function Home() {
   const uniqueCategories = [...new Set(categoryList)];
 
   return (
-    <div className="p-6">
+    <Layout>
       <Navbar />
       <Search search={search} setSearch={setSearch} />
       <div>
@@ -80,6 +81,6 @@ export default function Home() {
           );
         })}
       </div>
-    </div>
+    </Layout>
   );
 }
