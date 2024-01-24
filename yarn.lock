@@ -1019,6 +1019,11 @@ update-browserslist-db@^1.0.13:
     escalade "^3.1.1"
     picocolors "^1.0.0"
 
+use-local-storage-state@^19.1.0:
+  version "19.1.0"
+  resolved "https://registry.yarnpkg.com/use-local-storage-state/-/use-local-storage-state-19.1.0.tgz#9424981fd95dd37d253aad982f0a959ef5542fe2"
+  integrity sha512-3Ea6uRtRaSwpZYD9maZPKoEEGRuHmVA7zGrV/Uh9s5NTj9K1x/MB4IOQoywjUesQyhXmJq6bqjC5cAqlsXoOTw==
+
 util-deprecate@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
